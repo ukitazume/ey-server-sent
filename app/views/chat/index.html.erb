@@ -12,4 +12,13 @@ source.addEventListener('message', function(event) {
   document.getElementById("result").innerHTML += event.data + "<br>";
   console.log(source.readyState);
 });
+
+source.addEventListener("open",function(e){
+  console.log('open');
+  console.log(e);
+});
+source.addEventListener("close",function(e){
+  console.log('close');
+  console.log(e);
+});
 </script>
