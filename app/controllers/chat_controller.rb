@@ -8,7 +8,7 @@ class ChatController < ApplicationController
     response.headers['Content-Type'] = 'text/event-stream'
     response.headers['X-Accel-Buffering'] = 'no'
     100000000.times {
-      response.stream.write "data: hello world #{Time.zone.now}\n" + "\r\n\n"
+      response.stream.write "data: hello world #{Time.zone.now}\n" + "\n\n"
       sleep 1
     }
     render nothing: true
